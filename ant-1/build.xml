@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="ant-1" default="copy">
+
+    <target name="init">
+        <echo message="Build ant1"/>
+    </target>
+
+    <target name="create" depends="init">
+        <echo message="Create ant1"/>
+        <echo file="src/files/newFile.txt" message="Create ant1"/>
+    </target>
+
+    <target name="copy" depends="create">
+        <echo message="Copy ant1"/>
+        <echo file="src/files/newFile.txt" append="true" message="Copy ant1"/>
+    </target>
+</project>
