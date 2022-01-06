@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="ant-2" default="compile">
+
+    <target name="init">
+        <echo message="Build ant2"/>
+    </target>
+
+    <target name="create" depends="init">
+        <delete dir="build"/>
+        <mkdir dir="build/classes"/>
+    </target>
+
+    <target name="compile" depends="create">
+        <javac includeantruntime="false" srcdir="src" destdir="build/classes"/>
+    </target>
+</project>
